@@ -1,4 +1,6 @@
 class Menu < ActiveRecord::Base
   attr_accessible :icon, :title, :url
-  has_many :submenus
+  validates :title, presence: true
+  validates :icon, presence: true
+  has_many :submenus, dependent: [:destroy, :update]
 end
