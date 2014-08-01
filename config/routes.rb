@@ -8,6 +8,7 @@ Dba::Application.routes.draw do
   resources :menus do
     resources :submenus
   end
+  resources :submenus
   resources :posts
 
 
